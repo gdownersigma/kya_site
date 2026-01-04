@@ -11,7 +11,9 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">KYA</a>
+            <a href="#" class="logo">
+                <img src="assets/KyaLogoNoBg.png" alt="Kya Beauty Logo">
+            </a>
             <button class="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -19,13 +21,18 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Skincare</a></li>
-                <li><a href="#">Waxing & Tinting</a></li>
-                <li><a href="#">Lashes</a></li>
-                <li><a href="#">Hands & Feet</a></li>
-                <li><a href="#">Massage</a></li>
-                <li><a href="#">Makeup</a></li>
-                <li><a href="#">Price List</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="dropdown-toggle">Treatments <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Massage</a></li>
+                        <li><a href="#">Hands & Feet</a></li>
+                        <li><a href="#">Lashes & Brows</a></li>
+                        <li><a href="#">Waxing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +48,7 @@
 
     <section class="brands" id="brands">
         <h2 class="section-title">Our Brands</h2>
-        <p class="section-subtitle">We partner with industry-leading brands to deliver exceptional results</p>
+        <p class="section-subtitle">We partner with industry-leading brands to deliver exceptional results.</p>
         <div class="brand-grid">
             <div class="brand-card">
                 <h3>Environ</h3>
@@ -74,30 +81,28 @@
     <section class="contact" id="contact">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-content">
-            <p class="contact-item"><strong>Address:</strong> Wootton, Isle of Wight</p>
-            <p class="contact-item"><strong>Telephone:</strong> xxxxx</p>
-            <p class="contact-item"><strong>Email:</strong> xxxxx</p>
+            <p class="contact-item"><strong>Address:</strong> 6 Beechcroft Drive, Wootton, PO33 4NB</p>
+            <p class="contact-item"><strong>Telephone:</strong> 01983565131</p>
+            <p class="contact-item"><strong>Email:</strong> kyabeautyiow@gmail.com</p>
         </div>
     </section>
 
     <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/KyabeautyIOW/" aria-label="Facebook" target="_blank">
+                <img src="assets/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/kyabeautyiow_/" aria-label="Instagram" target="_blank">
+                <img src="assets/ig.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@kyabeautyiow" aria-label="TikTok" target="_blank">
+                <img src="assets/tiktok.png" alt="TikTok">
+            </a>
+
+        </div>
         <p>&copy; 2025 Kya Beauty. All rights reserved.</p>
     </footer>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
