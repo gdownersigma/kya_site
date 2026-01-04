@@ -186,7 +186,7 @@ section {
 
 /* About */
 .about {
-    background: #c6c6c6;
+    background: linear-gradient(45deg, #c6c6c6 0%, #eeeeee 50%, #c6c6c6 100%);
 }
 
 .about-content {
@@ -195,9 +195,14 @@ section {
     text-align: center;
 }
 
+/* Grey Sections Container */
+.grey-sections {
+    background: linear-gradient(45deg, #c6c6c6 0%, #eeeeee 50%, #c6c6c6 100%);
+}
+
 /* Brands */
 .brands {
-    background: #c6c6c6;
+    background: none;
 }
 
 .brand-grid {
@@ -239,7 +244,7 @@ section {
 
 /* Contact */
 .contact {
-    background: #c6c6c6;
+    background: none;
 }
 
 .contact-content {
