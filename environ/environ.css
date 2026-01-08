@@ -1,0 +1,924 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    line-height: 1.7;
+    color: #333;
+    background: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header & Nav */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #661d6c;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: block;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #661d6c;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #8a2d91;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #661d6c;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+/* Hero Section - Split Layout */
+.hero {
+    display: flex;
+    min-height: 80vh;
+    margin-top: 0;
+}
+
+.hero-content {
+    flex: 1;
+    background: linear-gradient(135deg, #661d6c 0%, #8a2d91 50%, #661d6c 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 4rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.9;
+}
+
+.hero-content .about-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    opacity: 0.92;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    background: url('../assets/environ_skin.jpg') center center;
+    background-size: cover;
+    min-height: 400px;
+}
+
+/* Grey Sections Container */
+.grey-sections-dermalux {
+    background: linear-gradient(45deg, #c6c6c6 0%, #eeeeee 50%, #c6c6c6 100%);
+}
+
+/* Content Section */
+.content {
+    padding: 4rem 2rem;
+    background: none;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #661d6c;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    letter-spacing: 1px;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.content p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Enhance Section */
+.enhance-section {
+    padding: 0 2rem 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.enhance-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Treatment Feature Boxes */
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.treatment-box {
+    background: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid #661d6c;
+}
+
+.treatment-box .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.treatment-box h3 {
+    color: #661d6c;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.treatment-box p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    border-left: 4px solid #661d6c;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 29, 108, 0.1);
+}
+
+.benefit-card h3 {
+    color: #661d6c;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+}
+
+/* Dropdown Menu */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 250px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0.75rem 0;
+}
+
+.dropdown-menu a {
+    color: #661d6c;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu a:hover {
+    color: #8a2d91;
+}
+
+/* Footer */
+footer {
+    background: #661d6c;
+    color: #e8d5e9;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Light Types Grid */
+.light-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.light-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 4px solid #661d6c;
+}
+
+.light-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 29, 108, 0.1);
+}
+
+/* Coloured top borders for each light type */
+.light-card.blue {
+    border-top-color: #3498db;
+}
+
+.light-card.red {
+    border-top-color: #e74c3c;
+}
+
+.light-card.nearir {
+    border-top-color: #9b59b6;
+}
+
+.light-card.triwave {
+    border-top-color: linear-gradient(90deg, #3498db, #e74c3c, #9b59b6);
+    border-image: linear-gradient(90deg, #3498db, #e74c3c, #9b59b6) 1;
+}
+
+.light-card h3 {
+    color: #661d6c;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.light-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.light-card ul li {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.light-card ul li::before {
+    content: "•";
+    color: #661d6c;
+    position: absolute;
+    left: 0;
+}
+
+.light-card p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Special Callout Box */
+.special-callout {
+    background: linear-gradient(135deg, #661d6c 0%, #8a2d91 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.special-callout p {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    max-width: 100%;
+}
+
+.special-callout strong {
+    font-weight: 600;
+}
+
+/* Treatment Section - Standout Style */
+.treatment-section {
+    background: none;
+    padding: 2rem 3rem 4rem 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+}
+
+.treatment-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #661d6c;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.treatment-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+}
+
+.treatment-quote p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #555;
+}
+
+.treatment-divider {
+    width: 80px;
+    height: 2px;
+    background: #661d6c;
+    margin: 2rem auto;
+}
+
+.treatment-highlight {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #661d6c;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.treatment-section .section-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.treatment-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.treatment-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.treatment-box .icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+}
+
+.treatment-box h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.treatment-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 0 2rem 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-section .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #661d6c;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.pricing-section .section-subtitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(102, 29, 108, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid #661d6c;
+    position: relative;
+}
+
+.pricing-card.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #661d6c, #8a2d91);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-card h3 {
+    color: #661d6c;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.pricing-card .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #661d6c;
+}
+
+.pricing-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* Electro-Sonic Section */
+.electro-sonic-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.electro-sonic-section .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #661d6c;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.electro-sonic-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Two Column Comparison */
+.treatment-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.treatment-type {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.treatment-type.essential {
+    border-top: 4px solid #661d6c;
+}
+
+.treatment-type.focus-on {
+    border-top: 4px solid #8a2d91;
+}
+
+.treatment-type h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #661d6c;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.treatment-type .tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #8a2d91;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.treatment-type p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* Pricing Category Headings */
+.pricing-category {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #661d6c;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.pricing-category:first-of-type {
+    margin-top: 0;
+}
+
+.pricing-category-subtitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0.75rem 0;
+        border-top: 1px solid rgba(102, 29, 108, 0.1);
+    }
+
+    .has-dropdown {
+        visibility: visible;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        background: transparent;
+        box-shadow: none;
+        min-width: 100%;
+        width: 100%;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        backdrop-filter: none;
+    }
+
+    .dropdown-menu.active {
+        max-height: 800px;
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+
+    .dropdown-menu li {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
+    .dropdown-menu a {
+        padding: 0.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        display: inline-block;
+        transition: transform 0.3s;
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+    }
+
+    .arrow.rotated {
+        transform: rotate(180deg);
+    }
+
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 7rem 1.5rem 3rem;
+        order: 1;
+    }
+
+    .hero-image {
+        order: 2;
+        min-height: 300px;
+        flex: none;
+    }
+
+    .content {
+        padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+        font-size:rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+        .light-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .special-callout {
+        padding: 1.5rem;
+    }
+    
+    .special-callout p {
+        font-size: 1rem;
+    }
+    .treatment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .treatment-section {
+        padding: 3rem 1.5rem;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-section {
+        padding: 3rem 1.5rem;
+    }
+        .treatment-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .electro-sonic-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .treatment-type {
+        padding: 2rem 1.5rem;
+    }
+}
+
