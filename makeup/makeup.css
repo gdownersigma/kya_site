@@ -132,13 +132,13 @@ nav {
 
 .hero-image {
     flex: 1;
-    background: url('../assets/caci_jowl.jpg') center center;
+    background: url('../assets/bride.jpeg') center 5%;
     background-size: cover;
     min-height: 400px;
 }
 
 /* Grey Sections Container */
-.grey-sections-dermalux {
+.grey-sections-makeup {
     background: linear-gradient(45deg, #c6c6c6 0%, #eeeeee 50%, #c6c6c6 100%);
 }
 
@@ -168,24 +168,6 @@ nav {
 }
 
 .content p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    color: #555;
-    font-size: 1.15rem;
-    line-height: 1.9;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-
-/* Enhance Section */
-.enhance-section {
-    padding: 0 2rem 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.enhance-section p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 2rem;
@@ -282,62 +264,10 @@ footer {
     object-fit: contain;
 }
 
-/* Treatment Section - Standout Style */
-.treatment-section {
-    background: none;
-    padding: 2rem 3rem 4rem 3rem;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 3rem auto;
-}
-
-.treatment-section .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: #661d6c;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
-}
-
-.treatment-quote {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    color: #333;
-}
-
-.treatment-quote p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    opacity: 0.95;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: #555;
-}
-
-.treatment-divider {
-    width: 80px;
-    height: 2px;
-    background: #661d6c;
-    margin: 2rem auto;
-}
-
-.treatment-highlight {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #661d6c;
-    letter-spacing: 1px;
-    margin-top: 1.5rem;
-    font-style: italic;
-}
-
 /* Pricing Section */
 .pricing-section {
     padding: 0 2rem 4rem 2rem;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -361,14 +291,14 @@ footer {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
 }
 
 .pricing-card {
     background: white;
     border-radius: 12px;
-    padding: 2rem;
+    overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
@@ -380,58 +310,82 @@ footer {
     box-shadow: 0 8px 30px rgba(102, 29, 108, 0.15);
 }
 
-.pricing-card.featured {
-    border: 2px solid #661d6c;
-    position: relative;
-}
-
-.pricing-card.featured::before {
-    content: '£40 off';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+.card-accent {
+    height: 4px;
     background: linear-gradient(135deg, #661d6c, #8a2d91);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
-.pricing-header {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
+.card-body {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .pricing-card h3 {
     color: #661d6c;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 0.75rem;
-}
-
-.pricing-card .price {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #661d6c;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .pricing-card p {
     color: #555;
     font-size: 0.95rem;
-    line-height: 1.8;
+    line-height: 1.9;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    flex-grow: 1;
     text-align: center;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+.enquire-btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #661d6c;
+    border: 1.5px solid #661d6c;
+    padding: 0.65rem 2rem;
+    border-radius: 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin-top: auto;
+}
+
+.enquire-btn:hover {
+    background: linear-gradient(135deg, #661d6c, #8a2d91);
+    color: white;
+    transform: translateY(-2px);
+}
+/* Special Callout Box */
+.special-callout {
+    background: linear-gradient(135deg, #661d6c 0%, #8a2d91 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 900px;
+    margin: 3rem auto;
+}
+
+.special-callout p {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     margin: 0;
+    max-width: 100%;
+}
+
+.special-callout strong {
+    font-weight: 600;
 }
 
 /* Mobile Styles */
@@ -543,10 +497,6 @@ footer {
 
     .section-title {
         font-size: 1.6rem;
-    }
-
-    .treatment-section {
-        padding: 3rem 1.5rem;
     }
 
     .pricing-grid {
