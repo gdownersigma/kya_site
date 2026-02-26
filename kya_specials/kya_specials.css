@@ -121,18 +121,9 @@ nav {
     opacity: 0.9;
 }
 
-.hero-content .about-text {
-    font-size: 1rem;
-    line-height: 1.9;
-    opacity: 0.92;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    max-width: 500px;
-}
-
 .hero-image {
     flex: 1;
-    background: url('../assets/environ_skin.jpg') center center;
+    background: url('../assets/kya_specials.jpg') center 0%;
     background-size: cover;
     min-height: 400px;
 }
@@ -178,9 +169,6 @@ nav {
     font-weight: 300;
 }
 
-/* Enhance Section */
-/* Treatment Feature Boxes */
-/* Benefits Grid */
 /* Dropdown Menu */
 .has-dropdown {
     position: relative;
@@ -267,10 +255,58 @@ footer {
     object-fit: contain;
 }
 
-/* Light Types Grid */
-/* Coloured top borders for each light type */
-/* Special Callout Box */
 /* Treatment Section - Standout Style */
+.treatment-section {
+    background: none;
+    padding: 2rem 3rem 4rem 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+}
+
+.treatment-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #661d6c;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.treatment-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+}
+
+.treatment-quote p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #555;
+}
+
+.treatment-divider {
+    width: 80px;
+    height: 2px;
+    background: #661d6c;
+    margin: 2rem auto;
+}
+
+.treatment-highlight {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #661d6c;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
 /* Pricing Section */
 .pricing-section {
     padding: 0 2rem 4rem 2rem;
@@ -287,18 +323,9 @@ footer {
     letter-spacing: 2px;
 }
 
-.pricing-section .section-subtitle {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 3rem;
-}
-
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -310,11 +337,34 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
+    flex: 0 1 calc(50% - 1.5rem);
 }
 
 .pricing-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(102, 29, 108, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid #661d6c;
+    position: relative;
+}
+
+.pricing-card.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #661d6c, #8a2d91);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .pricing-header {
@@ -348,127 +398,6 @@ footer {
     text-align: center;
     margin: 0;
 }
-
-/* Electro-Sonic Section */
-.electro-sonic-section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.electro-sonic-section .section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: #661d6c;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-}
-
-.electro-sonic-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Two Column Comparison */
-/* Pricing Category Headings */
-.electro-sonic-header {
-    background: linear-gradient(135deg, #661d6c 0%, #8a2d91 100%);
-    padding: 4rem 3rem 3rem;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.section-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.electro-sonic-header .section-title {
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: white;
-    margin-bottom: 1.5rem;
-    letter-spacing: 2px;
-}
-
-.electro-sonic-header .electro-sonic-intro {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.electro-sonic-body {
-    background: white;
-    padding: 3rem;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.tech-benefits {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.tech-benefit {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    max-width: 220px;
-    background: #faf9fb;
-    border-radius: 8px;
-    border-bottom: 3px solid #661d6c;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.tech-benefit:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(102, 29, 108, 0.1);
-}
-
-.tech-benefit:nth-child(2) {
-    border-bottom-color: #8a2d91;
-}
-
-.tech-benefit:nth-child(3) {
-    border-bottom-color: #a855a8;
-}
-
-.tech-benefit h4 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #661d6c;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    letter-spacing: 1px;
-}
-
-.tech-benefit p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 300;
-    color: #666;
-    line-height: 1.7;
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -580,57 +509,15 @@ footer {
         font-size: 1.6rem;
     }
 
-    
-.pricing-grid {
+    .treatment-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
     
     .pricing-section {
         padding: 3rem 1.5rem;
     }
-        
-.electro-sonic-header {
-        padding: 3rem 1.5rem 2.5rem;
-    }
-    
-    .electro-sonic-header .section-title {
-        font-size: 2rem;
-    }
-    
-    .electro-sonic-header .electro-sonic-intro {
-        font-size: 1.05rem;
-    }
-    
-    .electro-sonic-body {
-        padding: 2rem 1.5rem;
-    }
-    
-    .tech-benefits {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    
-    .tech-benefit {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .electro-sonic-section {
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-    }
-    .content {
-    padding-left: 0;
-    padding-right: 0;
 }
-
-    .content-wrapper {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-

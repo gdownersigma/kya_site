@@ -289,115 +289,6 @@ footer {
     margin-bottom: 3rem;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.pricing-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(102, 29, 108, 0.15);
-}
-
-.pricing-card.featured {
-    border: 2px solid #661d6c;
-    position: relative;
-}
-
-.pricing-card.featured::before {
-    content: '£40 off';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #661d6c, #8a2d91);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.pricing-header {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-}
-
-.pricing-card h3 {
-    color: #661d6c;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-}
-
-.pricing-card .price {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #661d6c;
-}
-
-.pricing-card p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    flex-grow: 1;
-    text-align: center;
-    margin: 0;
-}
-.special-callout {
-    background: linear-gradient(135deg, #661d6c 0%, #8a2d91 100%);
-    color: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 900px;
-    margin: 3rem auto;
-    border-top: 8px solid #DA3E52; }
-
-.special-callout .callout-title {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.special-callout p {
-    color: white;
-    font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    margin: 0;
-    max-width: 100%;
-    line-height: 1.6; /* Added slight line-height for easier reading */
-}
-
-.special-callout strong {
-    font-weight: 600;
-}
-
 .wax-container {
     max-width: 900px;
     margin: 0 auto 2rem;
@@ -645,11 +536,8 @@ footer {
         font-size: 1.6rem;
     }
 
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
     
-    .pricing-section {
+.pricing-section {
         padding: 3rem 1.5rem;
     }
     .wax-grid {
